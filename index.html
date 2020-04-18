@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Out</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			
+		}
+
+
+		/*FIRST MENU MAIN */
+
+
+		#tit{color: #dadee5;
+			 font-size:60px; 
+			font-family: Helvetica;
+			font-size:60px; 
+			text-align: center;
+			margin: 0px;
+			border: 0;
+	    	}
+		#firstmenu ul {
+            list-style-type: none;
+            margin: 0;
+           
+            padding-left: 30%;
+            overflow: hidden;
+            background-color: transparent;
+            border: 0px;
+           }
+        #firstmenu li a {
+           display: block;
+           color: white;
+           text-align: center;
+           font-size:20px; 
+           font-family: "arial";
+           padding:0px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+
+            }
+        #firstmenu li a:hover {
+            color:#ba901f;
+             }
+        #firstmenu li{float: left;
+          }
+	    
+	    #myVideo {
+	    	margin: 0px;
+	    	}
+	    #main{
+	    	position: absolute;
+	    	width: 100%;
+	    	  z-index: 4;
+	    	  top: 0px;
+	    }
+          #titlink{
+       	text-decoration: none;
+       	 }
+     
+
+       /*ORDER THING */
+
+	
+      #orderlink {
+      	color: white;
+      	text-decoration: none;      	
+      	font-family: arial;
+        background-color: rgb(0,0,0,0.5);
+        border: 2px solid rgba(0,0,0,0.9);
+        padding: 10px 150px;
+ 		text-align: center;
+ 		text-decoration: none;
+  		display: inline-block;
+		font-size: 25px;
+		
+        }
+       #orderlink:hover{
+      	color: black;
+        background-color: white;
+        font-size:28px;
+        transition-property: bold;
+        transition:background-color 2s;
+        cursor: pointer;
+        transition-duration: 2s;
+        padding: 10px 200px;
+      }
+      #order{
+      	    position:absolute;
+	    	width: 100%;
+	        margin-top:400px ;               
+	    	background-color: rgba(0,0,0,0.5);
+	    	padding-bottom: 145px;
+            z-index: 1;
+      }
+       #orderlinkbutn{
+       	padding-left: 40px ;
+       	}
+       	 @font-face{
+       	src: url(nicefont.ttf);
+       	font-family: nicefont; 
+       }
+     
+
+        /*SECOND MENU STATIC ONE */
+
+     
+      #secondmenu {
+       background-color: rgba(0,0,0,0.5);
+       position: fixed;
+       top: 0;
+       width: 100%;
+       display: block;
+       z-index: 3;
+       opacity:0;
+       position:fixed;
+       }
+     
+      	#secondmenu ul {
+            list-style-type: none;
+            margin: 0;
+            
+            overflow: hidden;
+            border: 0px;
+           }
+          #secondmenucontent{
+            padding-left: 650px;
+          }
+         #secondmenucontent li a {
+           display: block;
+           color: white;
+           text-align: center;
+           font-size:20px; 
+           font-family: "arial";
+           padding-bottom: 10px;
+            padding-top:  15px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+            }
+         #secondmenucontent li a:hover {
+            color:#ba901f;
+            
+            }
+        #secondmenu li{float: left;
+        	}  
+        #printoutinsecmen{
+        	position: top-left;
+             display: block;
+           color: white;
+           text-align: center;
+           font-size:30px; 
+           font-family: "arial";
+           padding:10px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+        }  
+        #printoutinsecmen:hover{
+        	color: #ba901f;
+        }
+               
+        /*TWO BIG IMGS*/
+
+
+      
+       .imgs{
+       	padding-top: 20px;
+       	align-self: center;
+       	padding-left: 5%;
+       }
+       .imgs a img{
+        z-index: 0.2;
+        filter: opacity(60%);
+        margin: 10px;
+        border: 0px
+        border-spacing:0px;
+        overflow: 0;
+
+       }
+       .imgs a img:hover{
+       transition:opacity 20s;
+       	filter: opacity(100%);
+       	}
+       .text1 {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-40%, -250%);
+        }
+       .img1{
+       	padding: 80px;
+       	position: relative;
+       	font-size: 40px;
+       	font-family: arial;
+       	color:black;
+        font-weight: 900;
+        margin: 0px;
+       }
+       .img1:hover{
+        cursor: pointer;
+          }
+       .img2:hover{
+       	cursor: pointer;
+       }
+        .text2 {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-40%, -500%);
+        }
+       .img2{
+      	padding: 80px;
+       	position: relative;
+       	font-size: 40px;
+       	font-family: arial;
+       	color:black;
+        font-weight: 900;
+       }
+
+
+
+        /*ALSO CHECK EXTRA IMGS*/
+
+
+
+     
+       @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+       .aslocheck  .container:hover{
+       	animation: shake 0.5s;
+       	animation-iteration-count: infinite; 
+       	}
+    
+#aslochecklist{
+	float: left;
+}
+
+ .container {
+  position: relative;
+  width: 20%;
+  padding: 30px;
+  float: left;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+ height: 350px;
+ width: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  padding: 10px 50px;
+  border: 1px solid black;
+}
+.text:hover{
+	cursor: pointer;
+}
+          /*SIGN UP*/
+
+
+
+         #signup{
+         	padding-top: 400px;
+
+         }
+         #inputdata{
+         	padding-left: 280px;
+         	
+         	
+         	  }
+         #inputbox{
+         	height: 30px;
+         	width: 500px;
+         	border: 2px solid #656e77;
+         	
+         }
+         #submitinput{
+         	font-family: 'Encode Sans Expanded', sans-serif;
+         	font-size: 30px;
+         	background-color: black;
+         	color: white;
+         	transform: skewX(-20deg);
+         	padding-right: 30px;
+         	padding-left: 30px;
+         	transition-duration: 1s;
+         }
+         #submitinput:hover{
+         	transform: skewX(20deg);
+         	background-color: #21262d;
+         	color: white;
+         	transition-duration: 1s; 
+         	cursor: pointer;
+         }
+         #footer{
+         	padding-top: 30px;
+         	text-align: center;
+         	font-family: arial;
+         	font-size: 15px;
+         }
+         
+
+
+
+
+
+
+
+
+
+         /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#uploadmedia1{
+	opacity: 0.5;
+	padding: 50px;
+}
+
+
+#uploadmedia{
+	opacity: 0.5;
+	margin: 80px;
+}
+#uploadmedia:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+#uploadlinkslist li{
+	float: left;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+
+
+
+
+
+
+
+         /* The Modal (background) */
+.modal2{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+         /* The Modal (background) */
+.modal3{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content3 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close3 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal3 img{
+	width: 150px;
+	height: 200px;
+}
+#samplepicsviewmore:hover{
+	background-color:#1a1b1c;
+}
+</style>
+	
+</head>
+<body >
+
+    
+    
+
+
+	<div id="secondmenu">
+		  <ul >
+           <li><a href="index.html" id="printoutinsecmen">PRINT OUT</a></li>
+		   <div id="secondmenucontent">	
+		   <li><a href="design.html"  >DESIGN</a></li>
+		   <li><a href="explore.html" >EXPLORE</a></li>
+		   <li><a href="contact.html" >CONTACT</a></li>
+		   <li><a href="about.html" >ABOUT</a></li>
+		</div>
+		</ul>
+        </div>
+
+
+<div id="main">
+<a href="index.html" id="titlink"><p id="tit">PRINT OUT</p></a>
+<div id="firstmenu" >
+<hr style="color: #bbc3ce padding-bottom:0">
+<ul>
+  <li><a href="design.html" id="design">DESIGN</a></li>
+  <li><a href="explore.html" id="explore">EXPLORE</a></li>
+  <li><a href="contact.html" id="contact">CONTACT</a></li>
+  <li><a href="about.html" id="about">ABOUT</a></li>
+</ul>
+</div>
+<hr style="color: #bbc3ce padding-top:0;">
+</div>
+
+
+<div id="order">
+<p id="heading" style="color:white; font-family:nicefont; font-size: 50px; padding: 0px;margin:0px;padding-left: 40px;">   Get your first order now !</p>
+<p style="color: white;font-family:'Helvetica';font-size: 20px;padding: 0px;padding-left: 40px  ">  Click here to give your first order !</p>
+<span id="orderlinkbutn"><button  id="orderlink">Order Now</button></span>
+
+
+
+
+
+
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 style="font-family: 'Encode Sans Expanded', sans-serif;text-align:center; ">Upload the file</h1>
+    <P style="font-family: 'Encode Sans Expanded', sans-serif;text-align:center; ">For which u want the printout from :</P>
+
+    <span class="image-upload">
+    <label for="file-input">
+         <img src="my comp.png" height="100px" width="100px" id="uploadmedia" >
+    </label>
+
+    <input id="file-input" type="file"/>
+    </span>
+
+    
+       
+   <button id="uploadinternet" style="border: none;background-color: transparent;padding: 0px"><img src="internet.png" height="100px" width="100px" id="uploadmedia" ></button>
+         
+   <button id="uploadsample" style="border: none;background-color: transparent;padding: 0px"><img src="samplepics.png" height="100px" width="100px" id="uploadmedia"></button>
+       
+   <button id="uploadother" style="border: none;background-color: transparent;padding: 0px"><img src="more.png" height="100px" width="100px" id="uploadmedia"></button>
+        
+  </div>
+   
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Search Modal -->
+<div id="myModal2" class="modal2" style="padding-top: 150px;font-family:'Encode Sans Expanded', sans-serif;text-align:center; ">
+  <!-- Modal content-->
+  <div class="modal-content2">
+    
+      <span class="close2">&times;</span>
+      <h4 style="font-size: 35px; ">Google Search</h4>
+   
+    <!--<div class="modal-body">
+     <script async src="https://cse.google.com/cse.js?cx=001729407423417015693:zc4xj-cnvcw"></script>
+<div class="gcse-search"></div>-->
+
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="myModal3" class="modal3" style="padding-top: 150px;font-family:'Encode Sans Expanded', sans-serif;text-align:center; ">
+	<div class="modal-content3">
+		 <span class="close3">&times;</span>
+		<h1>Sample Pictures</h1>
+
+	  <div class="modal-body" style="align-content: center;">
+		<table>
+			<tr>
+				<td>
+					<img src="Penguins.jpg">
+				</td>
+				<td>
+					<img src="chrysanthemum.jpg">
+				</td>
+			    <td>
+					<img src="koala.jpg">
+				</td>
+				<td>
+					<img src="jellyfish.jpg">
+				</td>
+				<td>
+					<img src="desert.jpg">
+				</td>
+			    <td>
+					<img src="tulips.jpg">
+				</td>
+				 <td>
+					<a href="samplepics.html" style="font-size: 40px;text-decoration: none;color: #959ca6 ; " id="samplepicsviewmore">VIEW MORE</a>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!---<iframe width="560" height="315" src="https://www.youtube.com/embed/IEM-pM2z0wQ?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="vid"></iframe>-->
+
+
+<video autoplay muted loop id="myVideo" width=100% >
+  <source src="people.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+<div class="imgs">
+<span class="img1">
+<a href="explore.html" ><img id="help2" src="help1.jpg" height="500px" width="500px" ></a>
+<span class="text1">POSTER TEMPLATES</span>
+</span>
+<span class="img2">
+<a href="design.html" ><img id="help3" src="help2.jpg" height="500px" width="500px"></a>
+<span class="text2">CREATE</span>
+</span>
+</div>
+
+
+<p style="font-size: 30px; font-family: arial;text-align: center;"><strong>ALSO CHECK OUT</strong></p>
+
+
+
+<div class="aslocheck">
+<div class="container">
+  <a href="index.html"><img src="desert.jpg" alt="Avatar" class="image" ></a>
+  <div class="middle">
+    <div class="text"><a href="index.html" style="text-decoration: none; color: black;font-family: arial;"><strong>READ MORE</strong></a></div>
+  </div>
+</div>
+
+<div class="container">
+  <a href="index.html"><img src="chrysanthemum.jpg" alt="Avatar" class="image" ></a>
+  <div class="middle">
+    <div class="text"><a href="index.html" style="text-decoration: none; color: black;font-family: arial;"><strong>READ MORE</strong></a></div>
+  </div>
+</div>
+
+<div class="container">
+  <a href="index.html"><img src="tulips.jpg" alt="Avatar" class="image" ></a>
+  <div class="middle">
+     <div class="text"><a href="index.html" style="text-decoration: none; color: black;font-family: arial;"><strong>READ MORE</strong></a></div>
+  </div>
+</div>
+
+<div class="container">
+  <a href="index.html"><img src="koala.jpg" alt="Avatar" class="image" ></a>
+  <div class="middle">
+    <div class="text"><a href="index.html" style="text-decoration: none; color: black;font-family: arial;"><strong>READ MORE</strong></a></div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<!--<div class="aslocheck">
+	<ul type="none">
+
+
+		<div id="container">
+		<li><a href="check1.html"><img src="desert.jpg" height="350px" width="300px" class="image"></a></li>
+		<div class="middle">
+	<p class="text"><strong>READ MORE</strong></p>
+	     </div>
+	    </div>
+
+
+		<li><a href="check2"><img src="chrysanthemum.jpg" height="350px" width="300px"></a></li>
+		<li><a href="check3"><img src="tulips.jpg" height="350px" width="300px"></a></li>
+		<li><a href="check4"><img src="koala.jpg" height="350px" width="300px"></a></li>
+		<li><a href="check5"><img src="lighthouse.jpg" height="350px" width="300px"></a></li>
+		<li><a href="check6"><img src="Penguins.jpg" height="350px" width="300px"></a></li>-->
+	</ul>
+</div>
+
+
+ <div id="signup">    
+	<p id="signuphead" style="font-size:40px;font-family: nicefont;text-align: center; " >Sign me up to stay updated with all the offers !</p><br>
+	<div id="inputdata">
+	<form action="">
+        <p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif; "><strong>Enter a Username :</strong>
+		<input type="text" name="username" id="inputbox" placeholder="Enter username here*" required="This field is required">
+	    </p>
+		<p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif;"><strong>Enter your e-mail :</strong>
+		<input type="email" name="email" id="inputbox" placeholder="Enter email here*" required="This field is required"></p>
+		<p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif;"><strong>Enter a password :</strong>
+		<input type="password" name="password" id="inputbox" minlength="8" placeholder="Enter password here*"required="This field is required"></p>
+		<input type="submit" name="submit" id="submitinput">
+	</form>
+</div>
+</div>
+
+
+<div id="footer">
+	<p>Customer Service Contact : something@printout.com</p>
+	<p>PRINT OUT 2019. All Rights Reserved ®</p>
+</div>
+
+
+
+
+
+<!--<h3>We are affiliated with <span style="color: orange">1</span><span style="color: blue">0</span><span style="color: green">0</span><span style="color: pink">0</span><span style="color: purple">s</span> of xerox shops in Hyderabad</h3>-->
+	
+	<script type="text/javascript">
+	window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+ 
+  if (200 > currentScrollPos) {
+    
+      document.getElementById("secondmenu").style.opacity = "0";
+  } else {
+   
+     document.getElementById("secondmenu").style.opacity = "1";
+  }
+
+  
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("orderlinkbutn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+orderlink.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+
+
+// Get the modal
+var modal2 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("uploadinternet");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+btn2.onclick = function() {
+  modal2.style.display = "block";
+  modal.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+  modal.style.display = "block";
+}
+
+
+
+
+
+
+
+
+// Get the modal
+var modal3 = document.getElementById("myModal3");
+
+// Get the button that opens the modal
+var btn3 = document.getElementById("uploadsample");
+
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks the button, open the modal 
+btn3.onclick = function() {
+  modal3.style.display = "block";
+  modal.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+  modal3.style.display = "none";
+  modal.style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>		
+
+
+
+    
+
+</body>
+</html>
