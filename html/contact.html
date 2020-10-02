@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet">
+	<style type="text/css">
+    html {
+  scroll-behavior: smooth;
+}  
+   body  {
+  background-image: url("../assets/images/coolbackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+	
+
+	/*FIRST MENU MAIN */
+      @font-face{
+        src: url(nicefont.ttf);
+        font-family: nicefont; 
+       }
+
+		#tit{color: #dadee5;
+			 font-size:60px; 
+			font-family: Helvetica;
+			font-size:60px; 
+			text-align: center;
+			margin: 0px;
+			border: 0;
+	    	}
+		#firstmenu ul {
+            list-style-type: none;
+            margin: 0;
+           
+            padding-left: 30%;
+            overflow: hidden;
+            background-color: transparent;
+            border: 0px;
+           }
+        #firstmenu li a {
+           display: block;
+           color: white;
+           text-align: center;
+           font-size:20px; 
+           font-family: "arial";
+           padding:0px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+
+            }
+        #firstmenu li a:hover {
+            color:#ba901f;
+             }
+        #firstmenu li{float: left;
+          }
+	    
+	   
+	    #main{
+	    	position: absolute;
+	    	width: 100%;
+	    	  z-index: 5;
+	    	  top: 0px;
+	    }
+          #titlink{
+       	text-decoration: none;
+       	 }
+       	      /*SECOND MENU STATIC ONE */
+
+     
+      #secondmenu {
+       background-color: rgba(0,0,0,0.5);
+       
+       top: 0;
+       width: 100%;
+       display: block;
+       z-index: 3;
+       opacity:0;
+       position:fixed;
+       }
+     
+      	#secondmenu ul {
+            list-style-type: none;
+            margin: 0;
+            
+            overflow: hidden;
+            border: 0px;
+           }
+          #secondmenucontent{
+            padding-left: 650px;
+          }
+         #secondmenucontent li a {
+           display: block;
+           color: white;
+           text-align: center;
+           font-size:20px; 
+           font-family: "arial";
+           padding-bottom: 10px;
+            padding-top:  15px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+            }
+         #secondmenucontent li a:hover {
+            color:#ba901f;
+            
+            }
+        #secondmenu li{float: left;
+        	}  
+        #printoutinsecmen{
+        	position: top-left;
+             display: block;
+           color: white;
+           text-align: center;
+           font-size:30px; 
+           font-family: "arial";
+           padding:10px;
+           padding-left: 35px;
+           padding-right: 35px;
+           text-decoration: none;
+        }  
+        #printoutinsecmen:hover{
+        	color: #ba901f;
+        }
+
+       /*Contact text*/
+
+       #contacthead{
+       	font-size: 50px;
+       	font-family:nicefont;
+       	text-align: center;
+       	border:  2px solid white;
+       z-index: 2;
+       	padding-left: 40px;
+       		padding-right: 40px;
+       		padding-top: 5px;
+       		padding-bottom: 5px;
+
+       }
+      
+
+
+       /*text n about us*/
+
+       #contactheading {
+       position: absolute;
+  		bottom: 210px;
+ 		 left: 35%;
+ 		 font-size: 100px;
+ 		 font-family: nicefont;
+ 		 color: white;
+ 		z-index: 2;
+		}
+    
+   
+
+        /* meet the team*/
+        #contacttable1{
+          padding-left: 20%;
+          z-index: 2;
+         
+          margin-top: 800px;
+        }
+        #contactcontent{
+        	padding: 50px;
+        	padding-left: 100px;
+        	 z-index: 2;
+           
+        font-family: 'Encode Sans Expanded', sans-serif;
+            text-align:center; 
+            z-index: 2;
+        }
+        .contactbutton{
+        	width: 100%;
+        	background-color: black;
+        	font-size: 30px;
+        	font-family: arial;
+        	color: white;
+        	height:  50px;
+        	transform: skewX(30deg);
+         	transition-duration: 1s;
+        }
+        .contactbutton:hover{
+        	background-color: #888888;
+        	cursor: pointer;
+        	font-size: 35px;
+        	transform: skewX(-30deg);
+        }
+        #contactimg{
+        	padding-left: 0px;
+        }
+        .contacttitle{
+        	color: white;
+        	font-size: 30px;
+        }
+        .contactinfo{
+        	color: #9ca0a6;
+        	font-size: 25px;
+        }
+        #contactcontent2{
+        	
+        	padding: 50px;
+          padding-top: 80px;
+        	 font-family: 'Encode Sans Expanded', sans-serif;
+          text-align:center; 
+          z-index: 2;
+          
+         border-collapse: separate;
+            background-color: rgba(0,0,0,0.3);
+        }
+       
+        .contactbutton2{
+        	background-color: black;
+        	font-size: 30px;
+        	font-family: arial;
+        	color: white;
+        	height:  50px;
+        	transform: skewX(-30deg);
+         	transition-duration: 1s;
+          width: 100%;
+        }
+        .contactbutton2:hover{
+        	background-color: #888888;
+        	cursor: pointer;
+        	
+        	transform: skewX(30deg);
+        }
+
+
+
+
+          /*SIGN UP*/
+
+
+
+         #signup{
+         	padding-top: 100px;
+          color: white;
+         }
+         #inputdata{
+         	padding-left: 280px;
+         	
+         	
+         	  }
+         #inputbox{
+         	height: 30px;
+         	width: 500px;
+         	border: 2px solid #656e77;
+         	
+         }
+         #submitinput{
+         	font-family: 'Encode Sans Expanded', sans-serif;
+         	font-size: 30px;
+         	background-color: black;
+         	color: white;
+           	padding-right: 30px;
+         	padding-left: 30px;
+         	transform: skewX(-20deg);
+         	transition-duration: 1s;
+         }
+         #submitinput:hover{
+         	transform: skewX(20deg);
+         	background-color: #21262d;
+         	color: white;
+         	transition-duration: 1s; 
+         	cursor: pointer;
+         }
+         #footer{
+         	padding-top: 30px;
+         	text-align: center;
+         	font-family: arial;
+         	font-size: 15px;
+          color: white;
+         }        
+    </style>  
+</head>
+<body>
+
+
+    
+
+
+	<div id="secondmenu">
+		  <ul >
+           <li><a href="index.html" id="printoutinsecmen">PRINT OUT</a></li>
+		   <div id="secondmenucontent">	
+		   <li><a href="design.html"  >DESIGN</a></li>
+		   <li><a href="explore.html" >EXPLORE</a></li>
+		   <li><a href="contact.html" >CONTACT</a></li>
+		   <li><a href="about.html" >ABOUT</a></li>
+		</div>
+		</ul>
+        </div>
+
+
+<div id="main">
+<a href="index.html" id="titlink"><p id="tit">PRINT OUT</p></a>
+<div id="firstmenu" >
+<hr style="color: #bbc3ce padding-bottom:0">
+<ul>
+  <li><a href="design.html" id="design">DESIGN</a></li>
+  <li><a href="explore.html" id="explore">EXPLORE</a></li>
+  <li><a href="contact.html" id="contact">CONTACT</a></li>
+  <li><a href="about.html" id="about">ABOUT</a></li>
+</ul>
+</div>
+<hr style="color: #bbc3ce padding-top:0">
+</div>
+
+
+     
+
+    
+
+   
+  
+
+
+     <div id="contactheading"><a href="#contacttable1" style="background-color: transparent;border: 1px solid white;color: white; text-decoration: none;top: 8000px;" id="contacthead">Meet the team</a></div>
+   
+
+   <table id="contacttable1">
+   	<tr>
+   		<td id="contactcontent">
+   			 <img src="../assets/images/indhranooi.jpg" style="height: 300px;width: 250px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.H.S.Supriya</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">CEO & Founder</p>
+        		<p style="color: white;">Undergraduate</p>
+        		<p style="color: white;">khssupriya@gmail.com</p>
+        		<p><button class="contactbutton">Contact</button></p>
+      		</div>
+   		</td>
+   		<td id="contactcontent">
+   			 <img src="../assets/images/bhargav.jpg"  style="height: 300px;width: 250px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.B.Srinivas</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">CEO & Founder</p>
+        		<p style="color: white;">Matriculate</p>
+        		<p style="color: white;">techwithbhargav@gmail.com</p>
+        		<p><button class="contactbutton">Contact</button></p>
+      		</div>
+   		</td>
+   	</tr>
+   </table >
+   <table style="padding-left:20%;">
+   	<tr>
+   		<td id="contactcontent2" >
+   			 <img src="../assets/images/bhargav.jpg" style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.H.S.Supriya</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Undergraduate</p>
+        		<p style="color: white;">khssupriya@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   		<td id="contactcontent2" >
+   			 <img src="../assets/images/bhargav.jpg"  style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.B.Srinivas</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Matriculate</p>
+        		<p style="color: white;">techwithbhargav@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   		<td id="contactcontent2">
+   			 <img src="../assets/images/bhargav.jpg"  style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.B.Srinivas</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Matriculate</p>
+        		<p style="color: white;">techwithbhargav@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   	</tr>
+   	   	<tr>
+   		<td id="contactcontent2">
+   			 <img src="../assets/images/bhargav.jpg" style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.H.S.Supriya</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Undergraduate</p>
+        		<p style="color: white;">khssupriya@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   		<td id="contactcontent2" >
+   			 <img src="../assets/images/bhargav.jpg"  style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.B.Srinivas</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Matriculate</p>
+        		<p style="color: white;">techwithbhargav@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   		<td id="contactcontent2">
+   			 <img src="../assets/images/bhargav.jpg"  style="height: 250px;width: 200px;" id="contactimg">
+   			  <div class="container">
+         		<h2 class="contacttitle" style="color: white;">K.B.Srinivas</h2>
+       			 <p class="contactinfo" style="color: #9ca0a6;">Member</p>
+        		<p style="color: white;">Matriculate</p>
+        		<p style="color: white;">techwithbhargav@gmail.com</p>
+        		<p><button class="contactbutton2">Contact</button></p>
+      		</div>
+   		</td>
+   	</tr>
+   </table>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="signup">    
+	<p id="signuphead" style="font-size:40px;font-family: nicefont;text-align: center; " >Sign me up to stay updated with all the offers !</p><br>
+	<div id="inputdata">
+	<form action="">
+        <p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif; "><strong>Enter a Username :</strong>
+		<input type="text" name="username" id="inputbox" placeholder="Enter username here*" required="This field is required">
+	    </p>
+		<p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif;"><strong>Enter your e-mail :</strong>
+		<input type="email" name="email" id="inputbox" placeholder="Enter email here*" required="This field is required"></p>
+		<p style="font-size:30px;font-family: 'Encode Sans Expanded', sans-serif;"><strong>Enter a password :</strong>
+		<input type="password" name="password" id="inputbox" minlength="8" placeholder="Enter password here*"required="This field is required"></p>
+		<input type="submit" name="submit" id="submitinput">
+	</form>
+</div>
+</div>
+
+
+<div id="footer">
+	<p>Customer Service Contact : something@printout.com</p>
+	<p>PRINT OUT 2019. All Rights Reserved ®</p>
+</div>
+
+
+ 
+  <script type="text/javascript">
+  window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+ 
+  if (200 > currentScrollPos) {
+    
+      document.getElementById("secondmenu").style.opacity = "0";
+  } else {
+   
+     document.getElementById("secondmenu").style.opacity = "1";
+  }
+
+  
+ 
+}
+
+</script>
+</body>
+</html>
